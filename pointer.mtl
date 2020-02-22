@@ -1,0 +1,11 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl arrow_material
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.152941 0.749020 0.043137
+Ks 0.003059 0.014980 0.000863
+Ni 1.000000
+d 0.800000
+illum 2
