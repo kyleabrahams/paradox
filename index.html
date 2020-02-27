@@ -109,17 +109,18 @@
         <a-asset-item id="scene" src="chevron/scene.gltf"></a-asset-item>
 
         <a-entity position="-1 0 0" rotation="0 90 0" gltf-model="#scene">
-          <a-animation attribute="scale"
-          delay="300"
-          dur="400"
-          from="1.5 1.5 1.5"
-          to= "1 1 1"
+          <a-animation attribute="position"
+          delay="000"
+          dur="1000"
+          from="-1 0 0"
+          to= "-3 0 0"
+          direction="alternate-reverse"
           repeat="indefinite"
-          easing= "linear">
+          easing= "ease-in-out-circ">
          </a-animation>
         </a-entity>
 
-        <a-entity position="-2 0 0" rotation="0 90 0" gltf-model="#scene">
+        <!-- <a-entity position="-2 0 0" rotation="0 90 0" gltf-model="#scene">
          <a-animation attribute="scale"
           delay="600"
           dur="600"
@@ -128,9 +129,9 @@
           repeat="indefinite"
           easing= "linear">
          </a-animation>
-        </a-entity>
+        </a-entity> -->
 
-        <a-entity position="-3 0 0" rotation="0 90 0" gltf-model="#scene">
+        <!-- <a-entity position="-3 0 0" rotation="0 90 0" gltf-model="#scene">
           <a-animation attribute="scale"
           delay="900"
           dur="800"
@@ -139,7 +140,7 @@
           repeat="indefinite"
           easing= "linear">
          </a-animation>
-        </a-entity>
+        </a-entity> -->
 
 
 
