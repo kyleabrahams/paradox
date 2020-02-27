@@ -188,6 +188,12 @@
         1
       ],
       "name": "RootNode (gltf orientation matrix)",
+      "position": [
+        0,
+        0,
+        0,
+        4
+      ],
       "rotation": [
         -0.70710678118654746,
         0,
