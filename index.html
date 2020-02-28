@@ -35,6 +35,8 @@
 <!------------------------------- NOT REQUIRED ------------------------------->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script> -->
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
+
 
 
 <!-- <script type="text/javascript">
@@ -78,21 +80,40 @@
 
     <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="scene" src="marcel/scene.gltf"></a-asset-item>
-      <a-gltf-model position="-0.1 0 0.9" rotation="-90 0 0" gltf-model="#scene" 
+      <a-entity gltf-model="#scene"  
+      scale="0.015 0.015 0.015"
+      position="0.5 -3 0.9" 
+      rotation="-90 0 0" 
       animation-mixer="loop:repeat">
-      </a-gltf-model>
+      </a-entity>
     </a-marker>
 
   <!-- GLTF -->
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="scene" src="jumpboost_arrow/scene.gltf"></a-asset-item>
-      <a-entity position="-0.1 0.3 0.4" rotation="0 -90 0" gltf-model="#scene"></a-entity>
+      <a-entity gltf-model="#scene" 
+      position="-0.1 0.3 0.4" 
+      rotation="0 -90 0" 
+      scale="0.005 0.01 0.01">
+      </a-entity>
     </a-marker> -->
     
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="Scamera" src="3DModels/security_camera/Scamera.gltf"></a-asset-item>
-      <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#Scamera"></a-entity>
+      <a-entity gltf-model="#Scamera"  
+      scale="0.01 0.01 0.01"
+      position="-0.1 0.3 0.4" 
+      rotation="-90 0 0">
+      </a-entity>
     </a-marker> -->
+
+  <!-- FBX -->
+  <!-- <a-marker preset="custom" type='pattern' url="markers/hiro.patt"> 
+    <a-entity fbx-model="src: url(stylized-girl-toky/source/untitled.fbx);" 
+    scale="0.5 0.5 0.5">
+    </a-entity>
+  </a-marker>  -->
+
 
 
 <!------------------------------- L MARKER ------------------------------->
