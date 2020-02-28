@@ -286,7 +286,7 @@
   "buffers": [
     {
       "byteLength": 1056096,
-      "uri": "scene.bin"
+      "uri": "Scamera.bin"
     }
   ],
   "images": [
@@ -399,6 +399,11 @@
         1
       ],
       "name": "RootNode (gltf orientation matrix)",
+      "scale": [
+        0.01,
+        0.01,
+        0.01
+            ],
       "rotation": [
         -0.70710678118654746,
         -0,
