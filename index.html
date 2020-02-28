@@ -56,43 +56,36 @@
       </video>
     </a-marker> -->
 
-  <!-- ANIMATED GLTF -->
+  <!-- ANIMATED GLTF src="dancer_girl/scene.gtlf" , src="gyroscope/scene.gltf"-->
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-      <a-asset-item id="scene" src="free_ai/scene.gltf"></a-asset-item>
-      <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#scene" animation-mixer="loop:repeat">
-        <a-animation attribute="position"
-        delay="0000"
-        dur="0000"
-        from="0 0 0"
-        to= "0 0 0"
-        direction="alternate-reverse"
-        repeat="indefinite"
-        easing="ease">
-       </a-animation>
-      </a-entity>
+      <a-asset-item id="gyroscope" src="gyroscope/scene.gltf"></a-asset-item>
+      <a-entity gltf-model="#gyroscope" animation-mixer="loop:repeat" 
+      scale="1.0 1.0 1.0" 
+      position="0 0 0" 
+      rotation="-90 0 0"></a-entity>
     </a-marker> -->
-    
+
     <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-      <a-asset-item renderer="gammaOutput: true" id="scene" src="robot_1/scene.gltf"></a-asset-item>
-      <a-entity gltf-model="#scene" 
+      <a-asset-item id="dancer" src="dancer_girl/scene.gltf"></a-asset-item>
+      <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
+      scale="0.02 0.02 0.02" 
+      position="0 -3.0 0" 
+      rotation="-0 0 0"></a-entity>
+    </a-marker>
+    
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item renderer="gammaOutput: true" id="robot" src="robot_1/scene.gltf"></a-asset-item>
+      <a-entity gltf-model="#robot" animation-mixer="loop:repeat" 
       scale="0.5 0.5 0.5"
       position="0.25 0.0 0.9" 
-      rotation="-90 0 0" 
-      animation-mixer="loop:repeat">
-      </a-entity>
-      <!-- light="type: hemisphere; color: #EEE; groundColor: #EEE; intensity: 2" -->
-    </a-marker>
-
-  <!-- GLTF -->
-    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-      <a-asset-item id="scene" src="jumpboost_arrow/scene.gltf"></a-asset-item>
-      <a-entity gltf-model="#scene" 
-      position="-0.1 0.3 0.4" 
-      rotation="0 -90 0" 
-      scale="0.005 0.01 0.01">
+      rotation="-90 0 0">
       </a-entity>
     </a-marker> -->
-    
+
+    <!-- light="type: hemisphere; color: #EEE; groundColor: #EEE; intensity: 2" -->
+
+
+  <!-- GLTF -->
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="Scamera" src="3DModels/security_camera/Scamera.gltf"></a-asset-item>
       <a-entity gltf-model="#Scamera"  
@@ -103,11 +96,7 @@
     </a-marker> -->
 
   <!-- FBX -->
-  <!-- <a-marker preset="custom" type='pattern' url="markers/hiro.patt"> 
-    <a-entity fbx-model="src: url(stylized-girl-toky/source/untitled.fbx);" 
-    scale="0.5 0.5 0.5">
-    </a-entity>
-  </a-marker>  -->
+
 
 
 
