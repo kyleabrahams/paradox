@@ -1,28 +1,16 @@
 <!doctype HTML>
 <html>
   <head>
-    <!------------------------------- REQUIRED ------------------------------->
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
-    
-    <!------------------------------- NOT REQUIRED ------------------------------->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script> -->
-    <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
-
-
-<!-- <script type="text/javascript">
-  function startFunction() {
-      console.log("Page loaded");
-      //alert("event heard");
-    }  
-</script> -->
+  
+<!--------------------------------- REQUIRED --------------------------------->
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 
 <!------------------------------- MP4 VIDEO SCRIPT ------------------------------->
   <script>                    
     AFRAME.registerComponent('video-vidhandler', {
         init: function() {
-  console.log('video init entered');
+    console.log('video init entered');
             this.toggle = false;
             this.vid = document.querySelector("#mp4");
             this.vid.pause();
@@ -40,6 +28,20 @@
         }
     });
   </script>
+
+<!------------------------------- NOT REQUIRED ------------------------------->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script> -->
+  <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
+
+
+<!-- <script type="text/javascript">
+  function startFunction() {
+      console.log("Page loaded");
+      //alert("event heard");
+    }  
+</script> -->
+
 </head>
 
   <body onload="startFunction();" style='margin : 0px; overflow: hidden;'>
@@ -48,7 +50,7 @@
 
 <!------------------------------- HIRO MARKER ------------------------------->
      
-    <!-- MP4 VIDEO -->
+  <!-- MP4 VIDEO -->
     <a-marker preset='custom' type='pattern' url="markers/hiro.patt" video-vidhandler>
       <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#mp4' controls></a-plane>
       <video preload="none" id="mp4" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
@@ -56,6 +58,7 @@
       </video>
     </a-marker>
 
+  <!-- ANIMATED GLTF -->
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="scene" src="free_ai/scene.gltf"></a-asset-item>
       <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#scene">
@@ -70,6 +73,15 @@
        </a-animation>
       </a-entity>
     </a-marker> -->
+
+  <!-- GLTF -->
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="scene" src="marcel/scene.gltf"></a-asset-item>
+      <a-gltf-model position="-0.1 0 0.9" rotation="-90 0 0" gltf-model="#scene" 
+      animation-mixer="clip: Guy_Walk; loop:repeat">
+      </a-gltf-model>
+    </a-marker> -->
+
   
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="scene" src="jumpboost_arrow/scene.gltf"></a-asset-item>
@@ -81,12 +93,6 @@
       <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#Scamera"></a-entity>
     </a-marker> -->
 
-    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-      <a-asset-item id="scene" src="marcel/scene.gltf"></a-asset-item>
-      <a-gltf-model position="-0.1 0 0.9" rotation="-90 0 0" gltf-model="#scene" 
-      animation-mixer="clip: Guy_Walk; loop:repeat">
-      </a-gltf-model>
-    </a-marker> -->
 
 <!------------------------------- L MARKER ------------------------------->
 
