@@ -46,6 +46,48 @@
     <a-scene embedded arjs="debugUIEnabled: false;">
       <a-entity camera></a-entity>
 
+<!------------------------------- HIRO MARKER ------------------------------->
+     
+    <!-- MP4 VIDEO -->
+    <a-marker preset='custom' type='pattern' url="markers/hiro.patt" video-vidhandler>
+      <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#mp4' controls></a-plane>
+      <video preload="none" id="mp4" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+       <source  src="videos/DanceAssassin.mp4">
+      </video>
+    </a-marker>
+
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="scene" src="free_ai/scene.gltf"></a-asset-item>
+      <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#scene">
+        <a-animation attribute="position"
+        delay="0000"
+        dur="0000"
+        from="0 0 0"
+        to= "0 0 0"
+        direction="alternate-reverse"
+        repeat="indefinite"
+        easing="ease">
+       </a-animation>
+      </a-entity>
+    </a-marker> -->
+  
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="scene" src="jumpboost_arrow/scene.gltf"></a-asset-item>
+      <a-entity position="-0.1 0.3 0.4" rotation="0 -90 0" gltf-model="#scene"></a-entity>
+    </a-marker> -->
+    
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="Scamera" src="3DModels/security_camera/Scamera.gltf"></a-asset-item>
+      <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#Scamera"></a-entity>
+    </a-marker> -->
+
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="scene" src="marcel/scene.gltf"></a-asset-item>
+      <a-gltf-model position="-0.1 0 0.9" rotation="-90 0 0" gltf-model="#scene" 
+      animation-mixer="clip: Guy_Walk; loop:repeat">
+      </a-gltf-model>
+    </a-marker> -->
+
 <!------------------------------- L MARKER ------------------------------->
 
       <a-marker id="marker1" touchEvent emitedevents="true" cursor='rayOrigin: mouse' preset='custom' type='pattern' url="markers/newL.patt"> 
@@ -77,48 +119,6 @@
          </a-animation>
         </a-entity>
       </a-marker>
-
-<!------------------------------- HIRO MARKER ------------------------------->
-     
-    <!-- MP4 VIDEO -->
-      <a-marker preset='custom' type='pattern' url="markers/hiro.patt" video-vidhandler>
-        <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#mp4' controls></a-plane>
-        <video preload="none" id="mp4" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
-         <source  src="videos/DanceAssassin.mp4">
-        </video>
-      </a-marker>
-
-      <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-        <a-asset-item id="scene" src="free_ai/scene.gltf"></a-asset-item>
-        <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#scene">
-          <a-animation attribute="position"
-          delay="0000"
-          dur="0000"
-          from="0 0 0"
-          to= "0 0 0"
-          direction="alternate-reverse"
-          repeat="indefinite"
-          easing="ease">
-         </a-animation>
-        </a-entity>
-      </a-marker> -->
-    
-      <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-        <a-asset-item id="scene" src="jumpboost_arrow/scene.gltf"></a-asset-item>
-        <a-entity position="-0.1 0.3 0.4" rotation="0 -90 0" gltf-model="#scene"></a-entity>
-      </a-marker> -->
-      
-      <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-        <a-asset-item id="Scamera" src="3DModels/security_camera/Scamera.gltf"></a-asset-item>
-        <a-entity position="-0.1 0.3 0.4" rotation="-90 0 0" gltf-model="#Scamera"></a-entity>
-      </a-marker> -->
-
-      <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
-        <a-asset-item id="scene" src="marcel/scene.gltf"></a-asset-item>
-        <a-gltf-model position="-0.1 0 0.9" rotation="-90 0 0" gltf-model="#scene" 
-        animation-mixer="clip: Guy_Walk; loop:repeat">
-        </a-gltf-model>
-      </a-marker> -->
 
     </a-scene>
   </body>
