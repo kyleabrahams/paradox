@@ -5,6 +5,7 @@
 <!--------------------------------- REQUIRED --------------------------------->
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+  <script src="components/json-model.js"></script>
 
 <!------------------------------- GLTF ANIMATION --------------------------------->
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -32,6 +33,47 @@
     });
   </script>
 
+<!------------------------------  TEST SCRIPTS ------------------------------->
+<script>
+  (function(modelEl) {
+    if (!window['AFRAME'] && !modelEl) {
+      return;
+    }
+
+    modelEl.addEventListener('model-loaded', function(evt) {
+        var model = evt.detail.model;
+
+      traverse(model);
+    });
+  })(document.getElementById('dancer'));
+
+  function traverse(node) {
+    node.children.forEach(function(child) {
+      if (child.children) {
+        traverse(child);
+      }
+
+      updateMaterial(child['material'], THREE.DoubleSide);
+    });
+  }
+
+  function updateMaterialSide(material, side) {
+    if (!material) {
+      return;
+    }
+
+    if (material instanceof THREE.Material) {
+      material.side = side;
+      material.needsUpdate = true
+    } else if (material instanceof THREE.MultiMaterial) {
+      material.materials.forEach(function(childMaterial) {
+        updateMaterial(childMaterial, side);
+      });
+    }
+  }
+</script>
+
+
 <!------------------------------- NOT REQUIRED ------------------------------->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script> -->
@@ -39,9 +81,9 @@
 
 </head>
 
-  <body onload="startFunction();" style='margin : 0px; overflow: hidden;'>
+  <body style='margin : 0px; overflow: hidden;'>
     <a-entity camera></a-entity>
-    
+
     <a-scene renderer="gammaOutput: false;" embedded arjs="debugUIEnabled: false;"> 
     
     
@@ -65,13 +107,40 @@
       rotation="-90 0 0"></a-entity>
     </a-marker> -->
 
-    <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item id="dancer" src="dancer_girl/scene.gltf"></a-asset-item>
       <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
       scale="0.06 0.06 0.06" 
+      position="0 -20 0" 
+      rotation="-90 0 0"></a-entity>
+    </a-marker> -->
+    <!-- scale="0.06 0.06 0.06"  -->
+
+    <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="dancer" src="dancing_stormtrooper/scene.gltf"></a-asset-item>
+      <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
+      scale="1 1 1" 
       position="0 0 0" 
       rotation="-90 0 0"></a-entity>
+    </a-marker> -->
+
+    <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="dancer" src="lady_gagnam_style/scene.gltf"></a-asset-item>
+      <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" material="shader: flat"
+      scale="2 2 2" 
+      position="1 0 2" 
+      rotation="-90 0 0"></a-entity>
     </a-marker>
+
+  <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
+      <a-asset-item id="dance-obj" src="crash-banicoot/crash-banicoot-doing-the-gangnam-style-dance.obj"></a-asset-item>
+      <a-asset-item id="dance-mtl" src="crash-banicoot/crash-banicoot-doing-the-gangnam-style-dance.mtl"></a-asset-item>
+    <a-entity obj-model="obj: #dance-obj; mtl: #dance-mtl" animation-mixer="loop:repeat"
+    scale="1 1 1" 
+    position="0 0 0" 
+    rotation="-90 0 0">
+   </a-entity>
+  </a-marker> -->
     
     <!-- <a-marker preset='custom' type='pattern' url="markers/hiro.patt">
       <a-asset-item renderer="gammaOutput: true" id="robot" src="robot_1/scene.gltf"></a-asset-item>
