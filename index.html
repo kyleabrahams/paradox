@@ -90,15 +90,16 @@
 
 <!------------------------------- HIRO MARKER ------------------------------->
      
-  <!-- MP4 VIDEO -->
-    <a-marker preset='custom' type='pattern' url="patt/hiro.patt" video-vidhandler>
+  <!----------------------------- MP4 VIDEO ----------------------------------->
+  <a-marker preset='custom' type='pattern' url="patt/hiro.patt" video-vidhandler>
       <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#mp4' controls></a-plane>
       <video preload="none" id="mp4" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
        <source  src="videos/DanceAssassin.mp4">
       </video>
     </a-marker>
 
-  <!-- ANIMATED GLTF src="dancer_girl/scene.gtlf" , src="gyroscope/scene.gltf"-->
+  <!-------------------------- ANIMATED GLTF -------------------------------->
+
     <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
       <a-asset-item id="gyroscope" src="gyroscope/scene.gltf"></a-asset-item>
       <a-entity gltf-model="#gyroscope" animation-mixer="loop:repeat" 
@@ -132,29 +133,11 @@
       rotation="-90 0 0"></a-entity>
     </a-marker> -->
 
-  <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
-      <a-asset-item id="dance-obj" src="crash-banicoot/crash-banicoot-doing-the-gangnam-style-dance.obj"></a-asset-item>
-      <a-asset-item id="dance-mtl" src="crash-banicoot/crash-banicoot-doing-the-gangnam-style-dance.mtl"></a-asset-item>
-    <a-entity obj-model="obj: #dance-obj; mtl: #dance-mtl" animation-mixer="loop:repeat"
-    scale="1 1 1" 
-    position="0 0 0" 
-    rotation="-90 0 0">
-   </a-entity>
-  </a-marker> -->
-    
-    <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
-      <a-asset-item renderer="gammaOutput: true" id="robot" src="robot_1/scene.gltf"></a-asset-item>
-      <a-entity gltf-model="#robot" animation-mixer="loop:repeat" 
-      scale="0.5 0.5 0.5"
-      position="0.25 0.0 0.9" 
-      rotation="-90 0 0">
-      </a-entity>
-    </a-marker> -->
-
     <!-- light="type: hemisphere; color: #EEE; groundColor: #EEE; intensity: 2" -->
 
 
-  <!-- GLTF -->
+  <!-------------------------- STILL GLTF -------------------------------->
+
     <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
       <a-asset-item id="Scamera" src="3DModels/security_camera/Scamera.gltf"></a-asset-item>
       <a-entity gltf-model="#Scamera"  
@@ -163,10 +146,6 @@
       rotation="-90 0 0">
       </a-entity>
     </a-marker> -->
-
-  <!-- FBX -->
-
-
 
 
 <!------------------------------- L MARKER ------------------------------->
@@ -197,21 +176,20 @@
         </a-entity>
       </a-marker>
 
-<!------------------------------- MP3 SOUND ------------------------------->
-
-
-      <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: url(SOUND/Mandalorian.mp3); autoplay: true">
-      </a-entity>
-
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+            <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
         <a-asset-item id="dancer" src="dancing_stormtrooper/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
         scale="1 1 1" 
         position="0 3 0" 
         rotation="-90 0 0"></a-entity>
       </a-marker> -->
-  
+
+<!------------------------------- MP3 SOUND ------------------------------->
+
+      <!-- <a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: url(SOUND/Mandalorian.mp3); autoplay: true">
+      </a-entity> -->
+
 
     </a-scene>
   </body>
