@@ -183,12 +183,11 @@
 
 <!------------------------------- T MARKER ------------------------------->
 
-      <a-marker id="chevronL" preset='custom' type='pattern' url="patt/L.patt">
+      <a-marker preset='custom' type='pattern' url="patt/L.patt">
         <!-- <a-asset-item id="scene" src="free_ai/scene.gltf"></a-asset-item> -->
         <a-asset-item id="chevronL" src="3DModels/chevron.gltf"></a-asset-item>
         <a-entity position="0 0 0" rotation="0 90 0" gltf-model="#chevronL">
           <a-animation attribute="position"
-          delay="0000"
           dur="1000"
           from="-0.4 2 0"
           to= "-6 2 0"
@@ -198,6 +197,15 @@
          </a-animation>
         </a-entity>
       </a-marker>
+
+      <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+        <a-asset-item id="dancer" src="dancing_stormtrooper/scene.gltf"></a-asset-item>
+        <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
+        scale="1 1 1" 
+        position="0 3 0" 
+        rotation="-90 0 0"></a-entity>
+      </a-marker>
+  
 
     </a-scene>
   </body>
