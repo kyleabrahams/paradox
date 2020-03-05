@@ -49,15 +49,15 @@
 
 </head>
 
-  <body style='margin : 0px; overflow: hidden;'>
+  <body style="margin : 0px; overflow: hidden;">
     <a-entity camera></a-entity>
 
     <a-scene renderer="gammaOutput: false;" embedded arjs="debugUIEnabled: false;"> 
     
 <!------------------------------- L MARKER ------------------------------->
 
-      <a-marker id="marker1" touchEvent emitedevents="true" cursor='rayOrigin: mouse' preset='custom' type='pattern' url="patt/newL.patt"> 
-        <a-entity rotation="-90 0 0" position="0 0 2" geometry="primitive:plane;width:4;height:2;" material="shader:gif;src:url(static.gif);" gif=""></a-entity>
+    <a-marker id="marker1" touchevent emitedevents="true" cursor="rayOrigin: mouse" preset="custom" type="pattern" url="patt/newL.patt"> 
+      <a-entity rotation="-90 0 0" position="0 0 2" geometry="primitive:plane;width:4;height:2;" material="shader:gif;src:url(static.gif);" gif=""></a-entity>
         <a-image material="alphaTest: 0.5" rotation="-90 0 0" position="0 1 2"  src="personImages/prdxTextGrey.png" width="3.0" height="3.0"></a-image>
         <a-image rotation="-90 0 0" position="0 0 0"  src="static.gif" width="2" height="2"></a-image>
         <a-image rotation="-90 0 0" position="0 0 0"  src="personImages/mainPoster.png" width="2" height="2"></a-image>
@@ -70,7 +70,7 @@
 
 <!------------------------------- T MARKER ------------------------------->
 
-      <a-marker preset='custom' type='pattern' url="patt/newT.patt">
+      <a-marker preset="custom" type="pattern" url="patt/newT.patt">
         <a-asset-item id="chevronL" src="3DModels/chevron.gltf"></a-asset-item>
         <a-entity position="0 0 0" rotation="0 90 0" gltf-model="#chevronL">
           <a-animation attribute="position"
@@ -88,7 +88,7 @@
      
 <!----------------------------- MP4 VIDEO ----------------------------------->
   
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt" video-vidhandler>
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt" video-vidhandler>
           <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#mp4' controls></a-plane>
           <video preload="none" id="mp4" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
             <source  src="videos/DanceAssassin.mp4">
@@ -96,7 +96,7 @@
       </a-marker> -->
 
 <!----------------------------- FBX MODEL ----------------------------------->
-<a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+<a-marker preset="custom" type="pattern" url="patt/hiro.patt">
   <a-asset-item id="sphere" src="impossible_triangle/scene.gltf"></a-asset-item>
   <a-entity gltf-model="#sphere" animation-mixer="loop:repeat" 
   scale="0.2 0.2 0.2" 
@@ -107,7 +107,7 @@
 
 <!-------------------------- ANIMATED GLTF -------------------------------->
 
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt">
         <a-asset-item id="gyroscope" src="gyroscope/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#gyroscope" animation-mixer="loop:repeat" 
         scale="1.0 1.0 1.0" 
@@ -115,7 +115,7 @@
         rotation="-90 0 0"></a-entity>
       </a-marker> -->
 
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt">
         <a-asset-item id="dancer" src="dancer_girl/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
         scale="0.06 0.06 0.06" 
@@ -124,7 +124,7 @@
       </a-marker> -->
       <!-- scale="0.06 0.06 0.06"  -->
 
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt">
         <a-asset-item id="dancer" src="dancing_stormtrooper/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
         scale="1 1 1" 
@@ -132,7 +132,7 @@
         rotation="-90 0 0"></a-entity>
       </a-marker> -->
 
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt">
         <a-asset-item id="dancer" src="lady_gagnam_style/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" material="shader: flat"
         scale="2 2 2" 
@@ -145,7 +145,7 @@
 
 <!-------------------------- STILL GLTF -------------------------------->
 
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt">
         <a-asset-item id="Scamera" src="3DModels/security_camera/Scamera.gltf"></a-asset-item>
         <a-entity gltf-model="#Scamera"  
         scale="0.01 0.01 0.01"
@@ -154,7 +154,7 @@
         </a-entity>
       </a-marker> -->
 
-      <!-- <a-marker preset='custom' type='pattern' url="patt/hiro.patt">
+      <!-- <a-marker preset="custom" type="pattern" url="patt/hiro.patt">
         <a-asset-item id="dancer" src="dancing_stormtrooper/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#dancer" animation-mixer="loop:repeat" 
         scale="1 1 1" 
