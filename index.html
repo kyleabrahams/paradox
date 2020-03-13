@@ -76,7 +76,7 @@
     </a-marker>
 
     <!------------------------------- T MARKER ------------------------------->
-    <!-- <a-marker preset="custom" type="pattern" url="patt/newT.patt">
+    <a-marker preset="custom" type="pattern" url="patt/newT.patt">
       <a-asset-item id="chevronLeft" src="3DModels/chevron.gltf"></a-asset-item>
       <a-entity position="0 0 0" rotation="0 90 0" scale="0.5 0.5 0.5" gltf-model="#chevronLeft">
         <a-animation attribute="position"
@@ -88,7 +88,27 @@
         easing="ease">
       </a-animation>
       </a-entity>
-    </a-marker> -->
+    </a-marker>
+
+      <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#mp4' controls></a-plane>
+      <video preload="none" id="mp4" response-type="arraybuffer" loop="true" crossorigin webkit-playsinline playsinline controls>
+        <source  src="videos/YourPrivacy.mp4">
+      </video>
+
+      <a-asset-item id="chevronRight" src="3DModels/chevron.gltf"></a-asset-item>
+      <a-entity position="0 0 0" rotation="180 90 0" scale="0.5 0.5 0.5" gltf-model="#chevronRight">
+        <a-animation attribute="position"
+          delay="0000"
+          dur="1000"
+          from="6.4 2 2"
+          to= "0 2 2"
+          direction="alternate"
+          repeat="indefinite"
+          easing="ease">
+        </a-animation>
+      </a-entity>
+
+    </a-marker>
 
     <!-- <a-marker preset="custom" type="pattern" url="patt/newT.patt">
       <a-asset-item id="chevronRight" src="3DModels/chevron.gltf"></a-asset-item>
